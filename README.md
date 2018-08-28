@@ -1,4 +1,5 @@
-# python101ldn
+# Introduction to Computation Using Python
+## Expedia Code Academy - Rome 2018
 Course content for python course
 
 ## For students
