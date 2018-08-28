@@ -1,11 +1,54 @@
 # Introduction to Computation Using Python
 ## Expedia Code Academy - Rome 2018
-Course content for python course
 
-## For students
-- To view the slideshows, please see the links on the [Python 101 website](https://python101ldn.github.io)
-
-## For teachers
-To see a demo of reveal.js, open [demo.html](demo.html) in a browser.
-
-Advanced features such as speaker notes will not be available unless the presentation is running from a local web server, see [here](https://github.com/hakimel/reveal.js/#full-setup) for more information.
+### Table of Contents
+#### Lecture 1
+- Course introdution
+- Course structure
+- Why python
+- Python installation
+- 2 methods to run python code
+- Variables
+    - Numbers
+    - Boolean
+    - Strings
+- Operators
+- Magic number Trick
+- Exercises
+#### Lecture 2
+- Casting
+- Control statements
+- If
+- If…else
+- If…elif…else
+- Input
+- Exercises
+#### Lecture 3
+- Advanced Types
+- Arrays
+    - Slicing
+    - Strings as arrays 
+- Tuples
+- Dictionaries
+- Exercises
+#### Lecture 4
+- While Loops
+- For Loops
+- Exercises
+#### Lecture 5
+- Functions
+    - Parameters
+    - Return
+- Exercises
+- Projects Introduction
+#### Lecture 6
+- Classes and OOP
+    - Classes
+    - Constructor
+    - Methods
+- Exercises
+- Projects Presentations
+#### Lecture 7
+- Projects Mentoring
+#### Lecture 8
+- Projects Mentoring
