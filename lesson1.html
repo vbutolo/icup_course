@@ -54,12 +54,13 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Class Resources
+            ### How the course is structured?
             
             There are a number of resources that we use in this class:
-            - The lesson slides are found here
-            - Exercises and solutions are found here
-            - Slack room for the class - #python101london
+            - 6 lessons on different computing topics
+            - Final project at your choice
+            - ToC, slides and exercises are found [here](https://rightright.me/icup_course)
+            - Slack room for the class -> #hcom-icup-rome
           </textarea>
         </section>
 
@@ -81,7 +82,16 @@
             <textarea data-template>
               ### Installation
               
-              Please check out the guide!
+              Hopefully we should be ready! :)
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+              ### Which are the two ways to run python code?
+              
+              - Interpeter
+              - From file with `pithon file`
             </textarea>
         </section>
 
@@ -91,13 +101,12 @@
             
             Variables are containers for your data
 
-            The name of the variable is chosen by the software developer (that’s you!)
-
             Feel free to write the following in a new file (e.g. monty.py)
 
             ``` python
             my_name = 'Monty'
             my_age = 100
+            am_i_adult = True
             ```
           </textarea>
         </section>
@@ -126,7 +135,7 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Numbers
+            ### Numbers and Operators
 
             Python can do basic maths with pretty big (or small) numbers!
             
@@ -140,43 +149,6 @@
         </section>
 
         <section data-markdown>
-          <textarea data-template>
-            ### How does Python work?</h3>
-           
-            ``` python
-              print(calculation)  # This will produce an error!
-              calculation = 55 + 55
-              print(calculation)  # prints 110
-
-              calculation = 55 * 55
-              print(calculation)  # prints 3025
-            ```
-
-            - Python evaluates files from top to bottom
-            - Variable values are updated as it goes
-            - `print` is a function that prints whatever value you give it in brackets
-          </textarea>
-        </section>
-
-        <section data-markdown>
-            <textarea data-template>
-              ### Magic number trick
-                
-              This is a small exercise to practice creating and changing variables<br><br>
-              
-              <ul>
-                <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
-                <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
-                <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
-                <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
-                <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
-                <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
-                <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
-              </ul>
-            </textarea>
-          </section>
-
-          <section data-markdown>
             <textarea data-template>
               ### Strings</h3>
   
@@ -195,7 +167,7 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Strings
+            ### Strings and Concatenation
             
             Adding Strings together is called <em>concatenation</em><br><br>
             
@@ -211,6 +183,55 @@
             How would we concatenate (add together) the `first_name` and `last_name` to make a variable called `full_name`?
           </textarea>
         </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Booleans and Logic Operators
+
+            Python can obtain booleans from Number and String variables!
+            
+            - Lower/Greater e.g. `3 < 2` or `3 > 2`
+            - Equality/ Inequality e.g. `3 == 3` or `3 != 3`
+            - LowerEqual/GreaterEqual e.g. `3 <= 2` or `3 >= 2`
+          </textarea>
+        </section>
+
+        <!-- <section data-markdown>
+          <textarea data-template>
+            ### How does Python work?</h3>
+           
+            ``` python
+              print(calculation)  # This will produce an error!
+              calculation = 55 + 55
+              print(calculation)  # prints 110
+
+              calculation = 55 * 55
+              print(calculation)  # prints 3025
+            ```
+
+            - Python evaluates files from top to bottom
+            - Variable values are updated as it goes
+            - `print` is a function that prints whatever value you give it in brackets
+          </textarea>
+        </section> -->
+
+        <section data-markdown>
+            <textarea data-template>
+              ### Magic number trick
+                
+              This is a small exercise to practice creating and changing variables<br><br>
+              
+              <ul>
+                <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
+                <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
+                <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
+                <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
+              </ul>
+            </textarea>
+          </section>
 
       </div>
     </div>

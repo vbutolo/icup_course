@@ -25,6 +25,14 @@
     box-shadow: none;
 }
 
+/* .reveal li {
+    margin: 10px 0;
+} */
+
+.reveal #code {
+	font-family: monospace;
+}
+
 .a {
 	text-decoration: underline;
 }
