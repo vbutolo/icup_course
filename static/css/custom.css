@@ -1,15 +1,28 @@
+.reveal {
+    font-size: 30px;
+}
+
+.reveal .first_slide h1 {
+    font-size: 2.5em;
+}
+
+.reveal .first_slide h2 {
+    font-size: 1.85em;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: bold;
+}
+
 .reveal section img {
-    background:none;
-    border:none;
-    box-shadow:none;
-}
-
-.reveal li {
-    margin: 10px 0;
-}
-
-.reveal #code {
-	font-family: monospace;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 .a {

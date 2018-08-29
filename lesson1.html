@@ -27,179 +27,189 @@
     <div class="reveal">
       <div class="slides">
         <!-- TITLE SLIDE -->
-        <section> 
-          <br>
-          <h2>Python 101</h2>
-          <h3>Lesson 1:<br>Introduction to Programming</h3>
-          <p>
+
+        <section class="first_slide" data-markdown>
+          <textarea data-template>
+            # Introduction to Computation Using Python
+            ## Lesson 1
+            
             <small>Expedia Code Academy</small>
             <br>
-            <img src="static/img/code_academy_logo.png" border="0px">
-          </p>
+            ![alt text](static/img/code_academy_logo.png)
+          </textarea>
         </section>
 
-        <section id="fragments">
-          <h3>What is our mission?</h3>
-          <p class="fragment">
-            <br>Simply put, to get you coding!<br><br>
-          </p>
-          <span class="fragment">
-            By the end of this course, you'll be able to:<br>
-          </span>
-            <ul>
-              <li class="fragment">Understand how code works</li>
-              <li class="fragment">Write basic Python code</li>
-              <li class="fragment">Design larger programs that combine various programming concepts learned</li>
-            </ul>
+        <section data-markdown>
+          <textarea data-template>
+            ### What is our mission?
+            
+            Simply put, to get you coding!
+            
+            By the end of this course, you'll be able to:
+            - Understand how code works
+            - Write basic Python code
+            - Design larger programs that combine various programming concepts learned
+          </textarea>
         </section>
 
-        <section id="fragments">
-          <h3>Class Resources</h3>
-          <span class="fragment">
-            There are a number of resources that we use in this class:<br><br>
-          </span>
-            <ul>
-              <li class="fragment">The lesson slides are found <a href="https://python101ldn.github.io/" target="_blank">
-              here
-            </a></li>
-              <li class="fragment">Exercises and solutions are found <a href="https://github.com/python101ldn/exercises" target="_blank">
-              here
-            </a></li>
-              <li class="fragment">Slack room for the class - #python101london</li>
-            </ul>
+        <section data-markdown>
+          <textarea data-template>
+            ### Class Resources
+            
+            There are a number of resources that we use in this class:
+            - The lesson slides are found here
+            - Exercises and solutions are found here
+            - Slack room for the class - #python101london
+          </textarea>
         </section>
 
-        <section id="fragments">
-          <h3>Why Python?</h3>
-          <p>
-            It's used by a lot of companies<br>
-            <img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" height="120px">
-            <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c529.png" height="120px">
-            <img src="http://diylogodesigns.com/blog/wp-content/uploads/2016/04/google-logo-icon-PNG-Transparent-Background.png" height="120px">
-            <br>
-            It has many use cases and it's fun to program in!!<br>
-            <ul>
-              <li>Process a file</li>
-              <li>Build a website</li>
-              <li>Create a game</li>
-              <li>Or anything else you can think of, really!</li>
-            </ul>
-          </p>
+        <section data-markdown>
+          <textarea data-template>
+            ### Why Python?
+            
+            It's used by a lot of companies
+
+            It has many use cases and it's fun to program in!!
+            - Process a file
+            - Build a website
+            - Create a game
+            - Or anything else you can think of, really!
+          </textarea>
         </section>
 
-        <section>
-          <h3>Installation</h3>
-          <p>Please check out the guide!</p>
+        <section data-markdown>
+            <textarea data-template>
+              ### Installation
+              
+              Please check out the guide!
+            </textarea>
         </section>
 
-        <section>
-          <h3>Variables</h3>
-          <p>
-            Variables are containers for your data<br><br>
-            The name of the variable is chosen by the software developer (that’s you!)<br><br>
+        <section data-markdown>
+          <textarea data-template>
+            ### Variables
+            
+            Variables are containers for your data
+
+            The name of the variable is chosen by the software developer (that’s you!)
+
             Feel free to write the following in a new file (e.g. monty.py)
-            <pre><code class="python" data-trim>
-              my_name = 'Monty'
-              my_age = 100
-            </code></pre>
-          </p>
+
+            ``` python
+            my_name = 'Monty'
+            my_age = 100
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Variables</h3>
-          <div>
-            <p>We can also change what is inside an existing variable:<br></p>
-            <pre><code class="python" data-trim>
-              my_name = 'Montgomery'
-              print(my_name)
-            </code></pre>
-            What do you think will be printed?<br><br>
-          </div>
-          <div class="fragment">
-            <p>Will the following lines of code work? Why/why not?<br></p>
-            <pre><code class="python" data-trim>
-              my_Name = 'John Cleese'
-              my age = 999
-            </code></pre>
-          </div>
+        <section data-markdown>
+          <textarea data-template>
+            ### Variables
+            
+            We can also change what is inside an existing variable:
+
+            ```python"
+            my_name = 'Montgomery'
+            print(my_name)
+            ```
+
+            What do you think will be printed?
+            
+            Will the following lines of code work? Why/why not?
+            
+            ```python
+            my_Name = 'John Cleese'
+            my age = 999
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Numbers</h3>
-          <p>
-            Python can do basic maths with pretty big (or small) numbers!<br><br>
+        <section data-markdown>
+          <textarea data-template>
+            ### Numbers
+
+            Python can do basic maths with pretty big (or small) numbers!
+            
             You can do the usual operations on these numbers:
-            <ul>
-              <li>Addition e.g.  <span id="code">38 + 138</span></li>
-              <li>Subtraction e.g.  <span id="code">500 - 2222</span></li>
-              <li>Multiplication e.g.  <span id="code">33 * 55</span></li>
-              <li>Division e.g.  <span id="code">400 / 3</span></li>
+
+            - Addition e.g. `38 + 138`
+            - Subtraction e.g. `500 - 2222`
+            - Multiplication e.g. `33 * 55`
+            - Division e.g. `400 / 3`
+          </textarea>
         </section>
 
-        <section>
-          <h3>How does Python work?</h3>
-          <p>
-            <br>
-            <pre><code class="python" data-trim>
+        <section data-markdown>
+          <textarea data-template>
+            ### How does Python work?</h3>
+           
+            ``` python
               print(calculation)  # This will produce an error!
               calculation = 55 + 55
               print(calculation)  # prints 110
 
               calculation = 55 * 55
               print(calculation)  # prints 3025
-            </code></pre>
-            <ul>
-              <li>Python evaluates files from top to bottom</li>
-              <li>Variable values are updated as it goes</li>
-              <li><span id="code">print</span> is a function that prints whatever value you give it in brackets</li>
-            </ul>
-          </p>
+            ```
+
+            - Python evaluates files from top to bottom
+            - Variable values are updated as it goes
+            - `print` is a function that prints whatever value you give it in brackets
+          </textarea>
         </section>
 
-        <section>
-          <h3>Magic number trick (⭐)</h3>
-          <p>
-            This is a small exercise to practice creating and changing variables<br><br>
-            For a solution, please see 
-            <a href="https://github.com/python101ldn/exercises/blob/master/Session_1/magic_number_solution.py" target="_blank">
-              here
-            </a>
-            <small>
-            <ul>
-              <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
-              <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
-              <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
-              <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
-              <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
-            </ul>
-          </small>
-        </section>
+        <section data-markdown>
+            <textarea data-template>
+              ### Magic number trick
+                
+              This is a small exercise to practice creating and changing variables<br><br>
+              
+              <ul>
+                <li class="fragment">Create a variable called <span id="code" style="color:red;">start_number</span>, and make it a random number</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:blue;">step_1</span>, and make it <span id="code" style="color:red;">start_number</span> multiplied by 2</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:orange;">step_2</span>, and add 9 to <span id="code" style="color:blue;">step_1</span></li>
+                <li class="fragment">Create a variable called <span id="code" style="color:green;">step_3</span>, and subtract 3 from <span id="code" style="color:orange;">step_2</span></li>
+                <li class="fragment">Create a variable called <span id="code" style="color:purple;">step_4</span>, and divide <span id="code" style="color:green;">step_3</span> by 2</li>
+                <li class="fragment">Create a variable called <span id="code" style="color:magenta;">result</span>, and subtract <span id="code" style="color:red;">start_number</span> from <span id="code" style="color:purple;">step_4</span></li>
+                <li class="fragment">Print <span id="code" style="color:magenta;">result</span></li>
+              </ul>
+            </textarea>
+          </section>
 
-        <section>
-          <h3>Strings</h3>
-          <p>
-            Strings are bits of text with apostrophes e.g.<br><span id="code">'I am a String, with 34 characters!'</span><br><br>
-            They can include letters, numbers and symbols - all of these are treated as text only, with no special value!<br><br>
-            What do you think this line of code will do?
-            <pre><code class="python" data-trim>
+          <section data-markdown>
+            <textarea data-template>
+              ### Strings</h3>
+  
+              Strings are bits of text with apostrophes e.g. `'I am a String, with 34 characters!'`
+
+              They can include letters, numbers and symbols - all of these are treated as text only, with no special value!
+
+              What do you think this line of code will do?
+              
+              ``` python
               mystery = '1' + '2'
               print(mystery)
-            </code></pre>
+              ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Strings</h3>
-          Adding Strings together is called <em>concatenation</em><br><br>
-          It can be really useful!
-          <pre><code class="python" data-trim>
+        <section data-markdown>
+          <textarea data-template>
+            ### Strings
+            
+            Adding Strings together is called <em>concatenation</em><br><br>
+            
+            It can be really useful!
+            
+            ``` python
             first_name = 'Harry'
             last_name = 'Potter'
             sentence = 'Welcome to Hogwarts, ' + first_name + ' ' + last_name + '!'
             print(sentence)
-          </code></pre><br>
-          How would we concatenate (add together) the <span id="code">first_name</span> and <span id="code">last_name</span> to make a variable called <span id="code">full_name</span>?
+            ```
+            
+            How would we concatenate (add together) the `first_name` and `last_name` to make a variable called `full_name`?
+          </textarea>
         </section>
 
       </div>
@@ -220,6 +230,9 @@
           { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
           history: true,
+          markdown: {
+		        smartypants: true
+	        },
           progress: false,
                 center: false, // disable vertical centering of text
                 transition: 'none'
