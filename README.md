@@ -19,13 +19,12 @@ In the first 6 hours students will learn basic programming concepts like data ty
     - Strings
 - Operators
 - Magic number Trick
-- Exercises
 #### Lecture 2
 - Casting
 - Control statements
-- If
-- If…else
-- If…elif…else
+    - If
+    - If…else
+    - If…elif…else
 - Input
 - Exercises
 #### Lecture 3
@@ -34,10 +33,10 @@ In the first 6 hours students will learn basic programming concepts like data ty
     - Slicing
     - Strings as arrays 
 - Tuples
-- Dictionaries
+- While Loops
 - Exercises
 #### Lecture 4
-- While Loops
+- Dictionaries
 - For Loops
 - Exercises
 #### Lecture 5
