@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 3 - While loops</title>
+    <title>Lesson 3</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -27,89 +27,212 @@
     <div class="reveal">
       <div class="slides">
         <!-- TITLE SLIDE -->
-        <section> 
-          <br>
-          <h2>Python 101</h2>
-          <h3>Lesson 3:<br>while loops</h3>
-          <p>
+
+        <section class="first_slide" data-markdown>
+          <textarea data-template>
+            # Introduction to Computation Using Python
+            ## Lesson 3
+            
             <small>Expedia Code Academy</small>
             <br>
-            <img src="static/img/code_academy_logo.png" border="0px">
-          </p>
+            ![alt text](static/img/code_academy_logo.png)
+          </textarea>
         </section>
 
-        <section>
-          <h3>Getting our code to do more</h3>
-          <p>How would we write code to print all numbers between 10 and 0?<br></p>
-          <p class="fragment">What about 100? Or 1000?</p>
-          <div class="fragment">
-            By using loops, we can make python evaluate code more than once<br>
-            <pre><code class="python" data-trim>
-              number = 10
-              
-              while number > 0: 
-                  print(number)
-                  number = number - 1
-              
-              print("Blast Off!")
-            </code></pre>
-          </div>
+        <section data-markdown>
+          <textarea data-template>
+            ### Lists
+
+            A list is an ordered set of values, where each value is identified by an index (its position in the list).
+            
+            Each of those values is called an element of the list.
+
+            ``` python
+            # a list of strings
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            # a list of numbers
+            exam_grades = [40, 55, 99, 73]
+            # a list containing mixed types
+            a_bit_of_everything = ['hello!', 2, True, 0.535]
+            # a list of lists
+            words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>While loops</h3>
-          While loops are like <span id="code">if</span> statements,<br>
-          except they keep looping through their block of code until
-          the Boolean is <span id="code">False</span>
-          <br><br>
-          <div class="fragment">
+        <section data-markdown>
+          <textarea data-template>
+            ### Lists
+
+            It is useful to know the number of items in a list too:
+            
+            ``` python
+            # Create a list
+            sentence = ['Programming', 'is', 'really', 'fun']
+            
+            length = len(sentence)
+            print(length) # 4
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Lists
+            You can pick out items from a list by using their index.<br>
+            
+            The index starts from 0!
+            
+            ``` python
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia']
+
+            print(expedia_brands[0])  # 'Hotels.com'
+            print(expedia_brands[2])  # 'Expedia'
+
+            print(exam_grades[0])  # 40
+            print(exam_grades[-1])  # 73
+            print(exam_grades[-2])  # 99
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Tuples
+            
+            A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists.
+            
+            The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets
+            ``` python 
+            expedia_brands_list = ['Hotels.com', 'EPS', 'Expedia']
+            expedia_brands_tuple = ('Hotels.com', 'EPS', 'Expedia')
+            
+            expedia_brands_list[1] = 'Changed'
+            expedia_brands_tuple[1] = 'Changed'
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Why use lists?
+
+            A list acts as a single variable to store lots of data.
+
+            Here are some basic list tricks:
+
+            ``` python
+            # Start with an empty list
+            sentence = ['Programming', 'is']
+            # Add an item to the end
+            sentence.append('fun')
+
+            print(sentence)
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Why use lists?
+
+            Sometimes it's useful to find if an element exists in a given list.
+
+            ``` python
+            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
+
+            if 'Booking.com' in expedia_brands:
+              print('Something must be wrong!')
+
+            if 'Hotels.com' in expedia_brands:
+              print('Yay!')
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Why use lists?
+
+            We can sort lists:
+            ``` python
+            random_numbers = [5, 3, 4, 6, 1, 2]
+            sorted_numbers = sorted(random_numbers)
+            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
+            ```
+
+            Or just take slices of a list:
+            ``` python
+              letters = ['a', 'b', 'c', 'd', 'e', 'f']
+              letters[1:3] # results in ['b', 'c']
+              letters[2:3] # results in ['c']
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Getting our code to do more
+            
+            How would we write code to print all numbers between 10 and 0?
+            
+            What about 100? Or 1000?
+            
+            By using loops, we can make python evaluate code more than once
+            ```
+            number = 10
+                
+            while number > 0: 
+                print(number)
+                number = number - 1
+            
+            print("Blast Off!")
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### While loops
+            While loops are like `if` statements, except they keep looping through their block of code until
+            the Boolean is `False`
+            
             What will this code do?
-            <pre><code class="python" data-trim>
-              number = 10
-              
-              while number > 0: 
-                  print(number)
-                  #  number = number - 1
-              
-              print("Blast Off!")
-            </code></pre>
+
+            ``` python
+            number = 10
+                
+            while number > 0: 
+                print(number)
+                #  number = number - 1
+            
+            print("Blast Off!")
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Accepting user input</h3>
-          <p><small>
-            <br>
-            What if we could provide data while our code is running?
-            <br><br>
-            <span id="code">input</span> pauses the program until the user types something and presses Enter.
-            <br><br>
-            We can then use what the user typed as a variable in the code!
-            <br><br>
-          </small></p>
+        <section data-markdown>
+          <textarea data-template>
+            ### Exercises
+            Using while loops, write programs that can:
+            - print the odd numbers up to 11</li>
 
-          <pre><code class="python" data-trim>
-          users_name = input('What is your name? ')
-          print('Hello, ' + users_name + '!')
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Exercises</h3>
-          Using while loops, write programs that can:
-          <div>
-          <ol>
-            <li> (⭐️) print numbers <em>up</em> to 10 (including 0 and 10)</li>
-            <li> (⭐️⭐️) print the multiples of 5 (5, 10, 15....) up to 200</li>
-            <li> (⭐️⭐️⭐️) print the odd numbers up to 10</li>
-            <li> (⭐️⭐️⭐️) FizzBuzz! See <a href="https://github.com/python101ldn/exercises/blob/master/3_fizzbuzz.py">here</a> for a description</li>
-          </ol><br><br>
-          Hint for exercises 3 and 4:
-          <pre><code class="python" data-trim>
+            Hint for exercise:
+            ``` python
             # Use % (known as modulo), the remainder operator
             10 % 2  # 0, as 10 divided by 2 is 5 with no remainder
             11 % 4  # 3, as 11 divided by 4 is 2 with a remainder of 3
-          </code></pre>
+            ```
+          </textarea>
+        </section>
 
+        <section data-markdown>
+          <textarea data-template>
+            ### Homework
+            
+            - Guess the number with while statement
+            - Word count of a text file
+          </textarea>
         </section>
 
       </div>
