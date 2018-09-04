@@ -217,15 +217,19 @@
          </section>
 
          <section data-markdown>
-          <textarea data-template>
-            ### Exercise
-            
-            - Create a variable called grade.
-            - Write an if statement, which will decide the mark a student will get based on their grade.
-            - If they get a grade higher than or equal to 60 - print 'Pass'.
-            - However, if they get a grade higher than 80 - print 'Distinction'.
-            - If their grade is lower than 60 - print 'Fail'.
-          </textarea>
+          <script type="text/template">
+### Exercise
+
+- Create a variable called grade.
+- Create a variable called honors.
+- Implement this table of truth:
+
+|              | grade<60 | 60=<grade             |
+|--------------|----------|-----------------------|
+| honors=False | Fail     | Pass                  |
+| honors=True  | Pass     | Pass with Distinction |
+
+          </script>
         </section>
 
         <section data-markdown>
@@ -251,7 +255,7 @@
             
             ## Guess the Number
 
-            Hint for exercise:
+            *Hint* for exercise:
             ``` python
             from random import randint
             guess = randint(0, 100) # generates a random number from 0 to 100
@@ -285,9 +289,8 @@
         ],
           history: true,
           progress: false,
-          center: false, // disable vertical centering of text
-          transition: 'none',
-          slideNumber: true
+          center: true, // disable vertical centering of text
+          transition: 'none'
       });
     </script>
   </body>

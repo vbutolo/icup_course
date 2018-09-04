@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Lesson 6</title>
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!-- Theme set to Simple Serif with custom overrides below -->
+    <link rel="stylesheet" href="reveal/css/theme/simple.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE SLIDE -->
+        
+        <section class="first_slide" data-markdown>
+          <textarea data-template>
+            # Introduction to Computation Using Python
+            ## Lesson 6
+            
+            <small>Expedia Code Academy</small>
+            <br>
+            ![alt text](static/img/code_academy_logo.png)
+          </textarea>
+        </section>
+
+        <section>
+          <h3>What's next?</h3>
+
+          It’s entirely up to you! You already have the knowledge and the tools to start expanding on what we’ve done here. <br><br>
+
+          A few potential projects: <br>
+         
+          <ul>
+            <li>Write a game! Something like Hangman or Rock, Paper, Scissors</li>
+            <li>Write a script to speed up something you do at work!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>More exercises</h3>
+
+          Exercise the things you've learned more. Some resources for that:<br><br>
+         
+          <ul>
+            <li>
+              <a href="https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt" target="_blank">
+                Python programming exercises
+              </a>
+            </li>
+            <li>
+              <a href="http://www.practicepython.org/" target="_blank">
+                PracticePython.org
+              </a>
+            </li>
+          </ul>
+        </section>
+
+         <section>
+          <h3>More classes</h3>
+
+          <img src="static/img/code_academy_logo.png" border="0px">
+          <br>
+
+          You're now all ready to take your Python to the next level with Python 2 Code Academy class! <br><br>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'reveal/plugin/markdown/marked.js' },
+          { src: 'reveal/plugin/markdown/markdown.js' },
+          { src: 'reveal/plugin/notes/notes.js', async: true },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+                history: true,
+          progress: false,
+                center: false, // disable vertical centering of text
+                transition: 'none'
+      });
+    </script>
+  </body>
+</html>
