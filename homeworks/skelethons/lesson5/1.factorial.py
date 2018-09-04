@@ -1,24 +1,20 @@
 # define a factorial function with one argument called n
-def factorial(n):
+
     # initialite the result variable
-    result = 1
 
     # for in n
-    for i in range(n):
+
         # result is equal him self * i
-        result = result * (i + 1)
 
     # return result
-    return result
 
-# define a factorial_recursive function with one argument called n
-def factorial_recursive(n):
+
+# define a factoria_recursive function with one argument called n
+
     # if n equal to 1 retrun n
-    if n == 1:
-        return n
+
     # else return n * facatoria_recursive passing n - 1
-    else:
-        return n * factorial_recursive(n - 1)
+
 
 print(factorial(2))
 print(factorial(4))
