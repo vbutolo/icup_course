@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Lesson 4 - Lists</title>
+    <title>Lesson 4</title>
 
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <!-- Theme set to Simple Serif with custom overrides below -->
@@ -27,208 +27,227 @@
     <div class="reveal">
       <div class="slides">
         <!-- TITLE SLIDE -->
-        <section> 
-          <br>
-          <h2>Python 101</h2>
-          <h3>Lesson 4:<br>Lists</h3>
-          <p>
+
+        <section class="first_slide" data-markdown>
+          <textarea data-template>
+            # Introduction to Computation Using Python
+            ## Lesson 4
+            
             <small>Expedia Code Academy</small>
             <br>
-            <img src="static/img/code_academy_logo.png" border="0px">
-          </p>
+            ![alt text](static/img/code_academy_logo.png)
+          </textarea>
         </section>
 
-        <section>
-          <h3>Lists</h3>
-          <p class="fragment">
-            A list is an ordered set of values, where each value is identified by an index (its position in the list).
-            <br><br>
-            Each of those values is called an element of the list.
-            <br><br>
-          </p>
-          <pre class="fragment"><code class="python" data-trim>
-              # a list of strings
-              expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-              # a list of numbers
-              exam_grades = [40, 55, 99, 73]
-              # a list containing mixed types
-              a_bit_of_everything = ['hello!', 2, True, 0.535]
-              # a list of lists
-              words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Lists</h3>
-          <pre><code class="python" data-trim>
-              # a list of strings
-              expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-              # a list of numbers
-              exam_grades = [40, 55, 99, 73]
-          </code></pre>
-
-          <div class="fragment">
-              You can pick out items from a list by using their index.<br>
-              The index starts from 0!
-          </div>
-
-          <div class="fragment">
-              <pre><code class="python" data-trim>
-                print(expedia_brands[0])  # 'Hotels.com'
-                print(expedia_brands[2])  # 'Expedia'
-
-                print(exam_grades[0])  # 40
-                print(exam_grades[-1])  # 73
-                print(exam_grades[-2])  # 99
-              </code></pre><br>
-          </div>
-
-        </section>
-
-        <section>
-          <h3>Lists exercise</h3>
-
-          It is useful to know the number of items in a list too:
-          <pre><code class="python" data-trim>
-            # Create a list
-            sentence = ['Programming', 'is', 'really', 'fun']
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionaries
             
-            length = len(sentence)
-            print(length) # 4
-          </code></pre>
+            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
 
-          <br>
+            Dictionaries are similar to lists, except the index of each element can be a string too!
 
-          <div class="fragment">
-            <pre><code class="python" data-trim>
-              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
-            </code></pre>
-            (⭐️) 4a. Write a program to add all the numbers in the list above together, and then print the result.
-            <br><br>
-          </div>
+            ``` python
+            eng_to_sp = {} # create an empty dictionary
 
+            eng_to_sp['one'] = 'uno' # add information to it
+            eng_to_sp['two'] = 'dos'
+
+            print(eng_to_sp)
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Why use lists?</h3>
-          <p>
-            <br>
-            A list acts as a single variable to store lots of data.
-            <br><br>
-            Here are some basic list tricks:
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionaries
 
-            <pre><code class="python" data-trim>
-              # Start with an empty list
-              sentence = ['Programming', 'is']
-              # Add an item to the end
-              sentence.append('fun')
-
-              print(sentence)
-            </code></pre>
-          </p>
-        </section>
-
-        <section>
-          <h3>Why use lists?</h3>
-          <br>
-          We can concatenate two lists together.
-
-          <pre><code class="python" data-trim>
-            # Create two lists
-            sentence_start = ['Programming', 'is']
-            sentence_end = ['really', 'fun']
+            The indices are called **keys**.
             
-            # Join the two lists together using the + operator
-            sentence = sentence_start + sentence_end
-            print(sentence)
-          </code></pre>
+            Each key has a **value** associated with it.
 
+            So the elements are called **key-value pairs**.
+
+            ``` python
+            # We can define the dictionary in one line too
+            eng_to_sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+
+            print(eng_to_sp['one']) # to print a value from the dictionary
+            ```  
+          </textarea>
         </section>
 
-        <section>
-          <h3>Why use lists?</h3>
-          <br>
-          Sometimes it's useful to find if an element exists in a given list.
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionary operations
 
-          <pre><code class="python" data-trim>
-            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
+            We can change the value for a given key or delete key-value pairs!
+            
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
-            if 'Booking.com' in expedia_brands:
-              print('Something must be wrong!')
+            # We can add oranges to our inventory
+            inventory['oranges'] = 317
+            # If someone buys all the pears, we can reassign their value
+            inventory['pears'] = 0
 
-            if 'Hotels.com' in expedia_brands:
-              print('Yay!')
-          </code></pre>
+            # Or if we expect to stock no more pears, we can delete the value!
+            del inventory['pears']
+
+            # Let's print what is left in the dictionary
+            print(inventory)
+
+            # We can find the number of key-value pairs in the dictionary
+            len(inventory) # just like for lists   
+            ```
+          </textarea>
         </section>
 
-        <section>
-          <h3>Why use lists?</h3>
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionary exercise
 
-          We can sort lists:
-          <pre class="fragment"><code class="python" data-trim>
-            random_numbers = [5, 3, 4, 6, 1, 2]
-            sorted_numbers = sorted(random_numbers)
-            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
-          </code></pre>
-
-          <div class="fragment">
-            <br>
-            Or just take slices of a list:
-            <pre><code class="python" data-trim>
-              letters = ['a', 'b', 'c', 'd', 'e', 'f']
-              letters[1:3] # results in ['b', 'c']
-              letters[2:3] # results in ['c']
-            </code></pre>
-          </div>
+            Let's go shopping!
+            
+            ``` python
+            inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
+            ```
+            
+            The program should:
+            1. Ask what the shopper would like to buy, and take user input.
+            2. Minus 1 of that item from that inventory and print the new inventory.
+            3. Assume that the user will type 'apples', 'pears' or 'bananas'!
+          </textarea>
         </section>
 
-        <section>
-          <h3>Exercises</h3>
-          <small>
-          Using while loops and lists, write programs that can:
-          <ul>
-            <li>
-              (⭐️⭐️) 4b. Program Bob (version 2)!
-              <br>
-              Get Bob to say '...sup' in response to 'hi', 'hello', 'hey' or 'howdy'. See 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_2/bob_solution.py" target="_blank">
-                here 
-              </a>
-              for the solution to the original Bob exercise.
-              <br><br>
-            </li>
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionary methods
 
-            <pre><code class="python" data-trim>
-              random_numbers = [-1, 5.36, 0, -25, 535, -42.3]
-            </code></pre>
+            We can get lists of all keys or all values.
+            
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
 
-            <li>
-              (⭐️⭐️) 4c. Using the list above, find the largest number.
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️) 4d. Using the list above, create a new list containing only the negative numbers.
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4e. Use a while loop to get Bob to continually talk to you until you say 'bye'.
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4f. Using the list above, find the largest product (multiplication) of any 2 numbers.
-              <br>
-              Make sure your solution works when all the numbers are negative!
-              <br><br>
-            </li>
-            <li>
-              (⭐️⭐️⭐️) 4g. Print a Christmas tree, as described 
-              <a href="https://github.com/python101ldn/exercises/blob/master/Session_4/4g_xmas_trees.py" target="_blank">
-                here
-              </a>
-            </li>
-          </ul>
-          </small
-          
+            print(inventory.keys())
+            # will print ['apples', 'pears', 'bananas']
+            print(inventory.values())
+            # will print [320, 228, 420]
+            ```
+
+            Or we can check if a dictionary contains a given key, just like in lists.
+
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+            'apples' in inventory # will return True
+            'oranges' in inventory # will return False
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Looping
+
+            We can use `while` to loop through lists
+
+            ``` python
+            words = ['Programming', 'in', 'Python', 'is', 'great!']
+            sentence = ''  # an empty string
+            index = 0
+            
+            while index < len(words):
+                sentence = sentence + ' ' + words[index]
+                index = index + 1
+            ```
+            
+            However, it's a pain to keep track of the list position! This is what `for` loops do:
+
+            ``` python
+            words = ['Programming', 'in', 'Python', 'is', 'great!']
+            sentence = ''  # an empty string
+            
+            for word in words:
+                sentence = sentence + ' ' + word
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### For loops
+
+            The `word` variable is recreated every round of the loop, with the value of the next item in the list.
+
+            You can name it anything you like! Just use the same variable name within the for loop.
+
+            ``` python
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            
+            for brand in expedia_brands:
+                print('I love ' + brand)
+
+            for scoobydoo in expedia_brands:  # same as the above for loop
+                print('I love ' + scoobydoo)
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### For loops
+
+            You can loop for keys and values at the same time!
+
+            ``` python
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            expedia_emplooyes_number = {
+              'Hotels.com': 70,
+              'EPS': 50,
+              'Expedia': 120
+            }
+
+            for i, value in enumerate(expedia_brands):
+                print('Counter:', i, ',Value:', value)
+
+            for i, value in expedia_brands.items():
+                print('Key:', key, ',Value:', value)
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### For loop exercise
+
+            Using a for loop and some_numbers, print each element multiplied by 10.
+            Example output: 15.0, 372.0, 550, -19.4
+
+            ``` python
+            some_numbers = [1.5, 37.2, 55, -1.94]
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Homework
+
+            - Lines and word count of a text file
+            - Track the count of the letters from a string
+              - `{'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}`
+
+              Hint for exercise:
+              file = open('balls.txt', 'r') # opens a file
+              string = balls_file.readline() # converts the file content to a array containing file lines
+              ``` python
+              # You can nest for loops one inside another
+              for i in range(5):
+                for j in range(10):
+                    print("I n.", i + 1, ",J n.", j + 1)
+              ```
+          </textarea>
         </section>
 
       </div>

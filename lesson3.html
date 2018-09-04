@@ -172,6 +172,19 @@
 
         <section data-markdown>
           <textarea data-template>
+            ### Strings can be treated like lists
+
+            What do we think this code will do?<br>
+
+            ``` python
+            my_string = 'Today is a great day!'
+            print(my_string[0])
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
             ### Getting our code to do more
             
             How would we write code to print all numbers between 10 and 0?
@@ -228,10 +241,21 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Homework
+            ### Homeworks
             
             - Guess the number with while statement
             - Word count of a text file
+
+            Hint for exercise:
+            file = open('balls.txt', 'r') # opens a file
+            string = balls_file.read() # converts the file content to a single string
+            ``` python
+            # You can split a string in a list of words using the `split` method
+            string = 'This is a string'
+            string = string.split()
+            print(string)
+            # Will print ['This', 'is', 'a', 'string']
+            ```
           </textarea>
         </section>
 
