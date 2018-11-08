@@ -39,45 +39,103 @@
           </textarea>
         </section>
 
-        <section>
-          <h3>What's next?</h3>
+        <section data-markdown>
+          <textarea data-template>
+            ### OOP - Object Oriented Programming
 
-          It’s entirely up to you! You already have the knowledge and the tools to start expanding on what we’ve done here. <br><br>
-
-          A few potential projects: <br>
-         
-          <ul>
-            <li>Write a game! Something like Hangman or Rock, Paper, Scissors</li>
-            <li>Write a script to speed up something you do at work!</li>
-          </ul>
+            Object-oriented programming (OOP) is a programming model based on the concept of "objects", which may contain data, in the form of attributes and their behavior in the form of methods.
+          </textarea>
         </section>
 
-        <section>
-          <h3>More exercises</h3>
+        <section data-markdown>
+          <textarea data-template>
+            ### Define a class with a constructor
 
-          Exercise the things you've learned more. Some resources for that:<br><br>
-         
-          <ul>
-            <li>
-              <a href="https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt" target="_blank">
-                Python programming exercises
-              </a>
-            </li>
-            <li>
-              <a href="http://www.practicepython.org/" target="_blank">
-                PracticePython.org
-              </a>
-            </li>
-          </ul>
+            Class variable values are shared among all instances of this class. This can be accessed as `Member.class_variable` from inside or outside the class.
+
+            The first method `__init__()` is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+
+            ``` python 
+            class Member:
+              "It's a member class" # documentation string
+              total_members = 0 # Class variable
+              
+              def __init__(self, name, age, is_captain, total_step_count): # initialize method called when class object is created
+                  self.name = name
+                  self.age = age
+                  self.is_captain = "Yes" if is_captain else "No" # assign "Yes" if the is_captain value is True else assigns "No"
+                  self.total_step_count = total_step_count
+                  Member.total_members += 1 # total_members is increased by 1 every time a new instance of Member is created
+            ```
+          </textarea>
         </section>
 
-         <section>
-          <h3>More classes</h3>
+        <section data-markdown>
+          <textarea data-template>
+            ### Define a class method
 
-          <img src="static/img/code_academy_logo.png" border="0px">
-          <br>
+            You declare other class methods like normal functions with the exception that the first argument to each method is self.
+            
+            Python adds the self argument to the list for you; you do not need to include it when you call the methods.
 
-          You're now all ready to take your Python to the next level with Python 2 Code Academy class! <br><br>
+            ``` python 
+            class Member:
+              "It's a member class" # documentation string
+              total_members = 0 # Class variable
+              
+              ...
+
+              def print_details(self): # Class method
+                print("Member:", self.name, " Team:", self.team_name, " Total Steps:", self.total_step_count, "Captain:", getattr(self, "is_captain"), "\n")
+              
+              #getattr method here returns the value of is_captain. it's an alias for self.is_captain
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Istantiate a class
+
+            To create instances of a class, you call the class using class name and pass in whatever arguments its init method accepts.
+
+            ``` python 
+            object_name = Class_Name(args...)
+            ```
+
+            For example:
+            ``` python 
+              john = Member("John", "18", "Safire", True, 500000) # Member object creation
+              john.print_details()
+              print(Member.total_members)
+            ```
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### What's next?
+
+            It’s entirely up to you! You already have the knowledge and the tools to start expanding on what we’ve done here.
+
+            A few potential projects:
+          
+            - Write a game! Something like Hangman or Rock, Paper, Scissors
+            - Write a script to speed up something you do at work!
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### More exercises
+
+            Exercise the things you've learned more. Some resources for that:
+         
+            - [Python programming exercises](https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt")
+            - [PracticePython.org](http://www.practicepython.org/)
+          </textarea>
         </section>
 
       </div>
