@@ -3,13 +3,14 @@ from random import randint
 # get a random number from 0 to 100
 number = randint(0, 100)
 
-# initialize a tentative counter
-tentative = 1
+# initialize a attempt counter
+attempt = 1
 
 # explain the game
-print('Guess a number from 1 to 100 in 10 tentatives.\n')
+print('Guess a number from 1 to 100 in 10 attempts.\n')
 
 # ask user for his first guess
+guess = int(input('Insert your number: '))
 
 # if guess > number give user the right info
 if guess > number:
@@ -24,14 +25,14 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-# increment tentative by one
-tentative += 1
+# increment attempt by one
+attempt += 1
 
 # nice formatting
 print('==================================\n')
 
-# repeat the same cycle: tentative 2
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 2
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -42,11 +43,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 3
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 3
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -57,11 +58,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 4
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 4
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -72,11 +73,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 5
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 5
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -87,11 +88,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 6
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 6
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -102,11 +103,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 7
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 7
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -117,11 +118,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 8
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 8
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -132,11 +133,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 9
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 9
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 if guess > number:
@@ -147,11 +148,11 @@ else:
     print('Congratulations ! You won.')
     exit()
 
-tentative += 1
+attempt += 1
 print('==================================\n')
 
-# repeat the same cycle: tentative 10
-print('Guess the number(tentative n. ', tentative,  "):")
+# repeat the same cycle: attempt 10
+print('Guess the number(attempt n. ', attempt,  "):")
 guess = int(input('Insert your number: '))
 
 # if guess > number give user the right info and he losts
