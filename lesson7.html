@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Lesson 7</title>
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!-- Theme set to Simple Serif with custom overrides below -->
+    <link rel="stylesheet" href="reveal/css/theme/simple.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE SLIDE -->
+
+        <section class="first_slide" data-markdown>
+          <textarea data-template>
+            # Introduction to Computation Using Python
+            ## Lesson 7
+            
+            <small>Expedia Code Academy</small>
+            <br>
+            ![alt text](static/img/code_academy_logo.png)
+          </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+              ### OOP - Object Oriented Programming
+  
+              Object-oriented programming (OOP) is a programming model based on the concept of "objects", which may contain data, in the form of attributes and their behavior in the form of methods.
+            </textarea>
+          </section>
+  
+        <section data-markdown>
+          <textarea data-template>
+            ### Define a class with a constructor
+
+            Class variable values are shared among all instances of this class. This can be accessed as `Member.class_variable` from inside or outside the class.
+
+            The first method `__init__()` is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+
+            ``` python 
+            class Member:
+              "It's a member class" # documentation string
+              total_members = 0 # Class variable
+              
+              def __init__(self, name, age, is_captain, total_step_count): # initialize method called when class object is created
+                  self.name = name
+                  self.age = age
+                  self.is_captain = "Yes" if is_captain else "No" # assign "Yes" if the is_captain value is True else assigns "No"
+                  self.total_step_count = total_step_count
+                  Member.total_members += 1 # total_members is increased by 1 every time a new instance of Member is created
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Define a class method
+
+            You declare other class methods like normal functions with the exception that the first argument to each method is self.
+            
+            Python adds the self argument to the list for you; you do not need to include it when you call the methods.
+
+            ``` python 
+            class Member:
+              "It's a member class" # documentation string
+              total_members = 0 # Class variable
+              
+              ...
+
+              def print_details(self): # Class method
+                print("Member:", self.name, " Team:", self.team_name, " Total Steps:", self.total_step_count, "Captain:", getattr(self, "is_captain"), "\n")
+              
+              #getattr method here returns the value of is_captain. it's an alias for self.is_captain
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Istantiate a class
+
+            To create instances of a class, you call the class using class name and pass in whatever arguments its init method accepts.
+
+            ``` python 
+            object_name = Class_Name(args...)
+            ```
+
+            For example:
+            ``` python 
+              john = Member("John", "18", "Safire", True, 500000) # Member object creation
+              john.print_details()
+              print(Member.total_members)
+            ```
+
+          </textarea>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'reveal/plugin/markdown/marked.js' },
+          { src: 'reveal/plugin/markdown/markdown.js' },
+          { src: 'reveal/plugin/notes/notes.js', async: true },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+                history: true,
+          progress: false,
+                center: false, // disable vertical centering of text
+                transition: 'none'
+      });
+    </script>
+  </body>
+</html>

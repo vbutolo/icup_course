@@ -41,150 +41,6 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Lists
-
-            A list is an ordered set of values, where each value is identified by an index (its position in the list).
-            
-            Each of those values is called an element of the list.
-
-            ``` python
-            # a list of strings
-            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-            # a list of numbers
-            exam_grades = [40, 55, 99, 73]
-            # a list containing mixed types
-            a_bit_of_everything = ['hello!', 2, True, 0.535]
-            # a list of lists
-            words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Lists
-
-            It is useful to know the number of items in a list too:
-            
-            ``` python
-            # Create a list
-            sentence = ['Programming', 'is', 'really', 'fun']
-            
-            length = len(sentence)
-            print(length) # 4
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Lists
-            You can pick out items from a list by using their index.<br>
-            
-            The index starts from 0!
-            
-            ``` python
-            expedia_brands = ['Hotels.com', 'EPS', 'Expedia']
-
-            print(expedia_brands[0])  # 'Hotels.com'
-            print(expedia_brands[2])  # 'Expedia'
-
-            print(exam_grades[0])  # 40
-            print(exam_grades[-1])  # 73
-            print(exam_grades[-2])  # 99
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Tuples
-            
-            A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists.
-            
-            The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets
-            ``` python 
-            expedia_brands_list = ['Hotels.com', 'EPS', 'Expedia']
-            expedia_brands_tuple = ('Hotels.com', 'EPS', 'Expedia')
-            
-            expedia_brands_list[1] = 'Changed'
-            expedia_brands_tuple[1] = 'Changed'
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Why use lists?
-
-            A list acts as a single variable to store lots of data.
-
-            Here are some basic list tricks:
-
-            ``` python
-            # Start with an empty list
-            sentence = ['Programming', 'is']
-            # Add an item to the end
-            sentence.append('fun')
-
-            print(sentence)
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Why use lists?
-
-            Sometimes it's useful to find if an element exists in a given list.
-
-            ``` python
-            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
-
-            if 'Booking.com' in expedia_brands:
-              print('Something must be wrong!')
-
-            if 'Hotels.com' in expedia_brands:
-              print('Yay!')
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Why use lists?
-
-            We can sort lists:
-            ``` python
-            random_numbers = [5, 3, 4, 6, 1, 2]
-            sorted_numbers = sorted(random_numbers)
-            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
-            ```
-
-            Or just take slices of a list:
-            ``` python
-              letters = ['a', 'b', 'c', 'd', 'e', 'f']
-              letters[1:3] # results in ['b', 'c']
-              letters[2:3] # results in ['c']
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Strings can be treated like lists
-
-            What do we think this code will do?<br>
-
-            ``` python
-            my_string = 'Today is a great day!'
-            print(my_string[0])
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
             ### Getting our code to do more
             
             How would we write code to print all numbers between 10 and 0?
@@ -223,43 +79,14 @@
             ```
           </textarea>
         </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Exercises
-            Using while loops, write programs that can:
-            - print the odd numbers up to 11</li>
-
-            Hint for exercise:
-            ``` python
-            # Use % (known as modulo), the remainder operator
-            10 % 2  # 0, as 10 divided by 2 is 5 with no remainder
-            11 % 4  # 3, as 11 divided by 4 is 2 with a remainder of 3
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Homeworks
-            
-            - Guess the number with while statement
-            - Word count of a text file
-
-            *Hint* for exercise:
-            ``` python
-            file = open('balls.txt', 'r') # opens a file
-            string = balls_file.read() # converts the file content to a single string
-            ```
-            ``` python
-            # You can split a string in a list of words using the `split` method
-            string = 'This is a string'
-            string = string.split()
-            print(string)
-            # Will print ['This', 'is', 'a', 'string']
-            ```
-          </textarea>
-        </section>
+  
+          <section data-markdown>
+            <textarea data-template>
+              ### Exercise
+              
+              - Guess the number
+            </textarea>
+          </section>
 
       </div>
     </div>

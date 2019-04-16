@@ -27,7 +27,7 @@
     <div class="reveal">
       <div class="slides">
         <!-- TITLE SLIDE -->
-
+        
         <section class="first_slide" data-markdown>
           <textarea data-template>
             # Introduction to Computation Using Python
@@ -41,109 +41,121 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Functions
-
-            Functions are bits of code that are **reusable**. This is handy because:
-            - You don't have to type as much
-            - It's easier to read
-            - If there's a mistake you only need to fix it once!
-
-            Examples:
-            ``` python
-            # The print function with 1 argument: a string
-            print("hello")
+            ### Dictionaries
             
-            # The len function with 1 argument: a list
-            len([0, 1, 2, 3])
+            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
+
+            Dictionaries are similar to lists, except the index of each element can be a string too!
+
+            ``` python
+            eng_to_sp = {} # create an empty dictionary
+
+            eng_to_sp['one'] = 'uno' # add information to it
+            eng_to_sp['two'] = 'dos'
+
+            print(eng_to_sp)
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Creating your own functions
-            
-            The syntax involves these key words: `def` and `return`
-              
-            Here's a function that adds 2 number **arguments** together:
-            ``` python
-            def add_two_numbers(num1, num2):
-                result = num1 + num2
-                return result
+            ### Dictionaries
 
-            # Let's call our function!
-            sum = add_two_numbers(612, 847)
+            The indices are called **keys**.
+            
+            Each key has a **value** associated with it.
+
+            So the elements are called **key-value pairs**.
+
+            ``` python
+            # We can define the dictionary in one line too
+            eng_to_sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+
+            print(eng_to_sp['one']) # to print a value from the dictionary
+            ```  
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionary operations
+
+            We can change the value for a given key or delete key-value pairs!
+            
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+            # We can add oranges to our inventory
+            inventory['oranges'] = 317
+            # If someone buys all the pears, we can reassign their value
+            inventory['pears'] = 0
+
+            # Or if we expect to stock no more pears, we can delete the value!
+            del inventory['pears']
+
+            # Let's print what is left in the dictionary
+            print(inventory)
+
+            # We can find the number of key-value pairs in the dictionary
+            len(inventory) # just like for lists   
+            ```
+          </textarea>
+        </section>
+
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Dictionary methods
+
+            We can get lists of all keys or all values.
+            
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+            print(inventory.keys())
+            # will print ['apples', 'pears', 'bananas']
+            print(inventory.values())
+            # will print [320, 228, 420]
+            ```
+
+            Or we can check if a dictionary contains a given key, just like in lists.
+
+            ``` python
+            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+
+            'apples' in inventory # will return True
+            'oranges' in inventory # will return False
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Things to remember
-            
-            Always write your function before you call it!<br>
-            
-            The below won't work - what error do you get?
-            
-            ``` python
-            # Let's call our function!
-            sum = add_two_numbers(612, 847)
+            ### Iterate through a dictionary
 
-            def add_two_numbers(num1, num2):
-                result = num1 + num2
-                return result
-            ```
+            You can loop for keys and values at the same time!
 
-            How about this?
-            
             ``` python
-            sum = add_two_numbers(612, 847, 555)
+            expedia_emplooyes_number = {
+              'Hotels.com': 70,
+              'EPS': 50,
+              'Expedia': 120
+            }
+
+            for key, value in expedia_emplooyes_number.items():
+                print('Key:', key, ',Value:', value)
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Different arguments
-            
-            What will `sum`be in this example?
-            
-            ``` python
-            def add_two_numbers(num1, num2):
-                result = num1 + num2
-                return result
+            ### Exercise
 
-            sum = add_two_numbers('my hovercraft is ', 'full of eels')
-            ```
-          </textarea>
-        </section>
+            - Track the count of the letters from a string
+              - `{'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}`
 
-        <section data-markdown>
-          <textarea data-template>
-            ### Exercises
-
-            1. Write a function that multiplies 2 numbers and returns the result
-            2. Write a function that multiplies all the numbers in a list together
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Homework
-
-            Write a factorial function (e.g. passed 5 as argument calculates 5 \* 4 \* 3 \* 2 \* 1)
-
-            *Hint* for exercise:
-            
-            There are 2 different ways to solve the exercise, using recursion and not. Try to implement both.
-            ``` python
-            def hello(n):
-              print('hello')
-              if n == 1:
-                  exit()
-              else:
-                  hello(n - 1)
-            ```
           </textarea>
         </section>
 

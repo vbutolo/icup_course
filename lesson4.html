@@ -41,107 +41,127 @@
 
         <section data-markdown>
           <textarea data-template>
-            ### Dictionaries
-            
-            So far we have seen lists - collections of data, where each element has an index. This index is a number. <br><br>
+            ### Lists
 
-            Dictionaries are similar to lists, except the index of each element can be a string too!
+            A list is an ordered set of values, where each value is identified by an index (its position in the list).
+            
+            Each of those values is called an element of the list.
 
             ``` python
-            eng_to_sp = {} # create an empty dictionary
-
-            eng_to_sp['one'] = 'uno' # add information to it
-            eng_to_sp['two'] = 'dos'
-
-            print(eng_to_sp)
+            # a list of strings
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
+            # a list of numbers
+            exam_grades = [40, 55, 99, 73]
+            # a list containing mixed types
+            a_bit_of_everything = ['hello!', 2, True, 0.535]
+            # a list of lists
+            words = [['hello', 'yes', 'no'], ['hola', 'si', 'no']]
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Dictionaries
+            ### Lists
 
-            The indices are called **keys**.
-            
-            Each key has a **value** associated with it.
-
-            So the elements are called **key-value pairs**.
-
-            ``` python
-            # We can define the dictionary in one line too
-            eng_to_sp = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
-
-            print(eng_to_sp['one']) # to print a value from the dictionary
-            ```  
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Dictionary operations
-
-            We can change the value for a given key or delete key-value pairs!
+            It is useful to know the number of items in a list too:
             
             ``` python
-            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
-
-            # We can add oranges to our inventory
-            inventory['oranges'] = 317
-            # If someone buys all the pears, we can reassign their value
-            inventory['pears'] = 0
-
-            # Or if we expect to stock no more pears, we can delete the value!
-            del inventory['pears']
-
-            # Let's print what is left in the dictionary
-            print(inventory)
-
-            # We can find the number of key-value pairs in the dictionary
-            len(inventory) # just like for lists   
+            # Create a list
+            sentence = ['Programming', 'is', 'really', 'fun']
+            
+            length = len(sentence)
+            print(length) # 4
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Dictionary exercise
-
-            Let's go shopping!
+            ### Lists
+            You can pick out items from a list by using their index.<br>
+            
+            The index starts from 0!
             
             ``` python
-            inventory = {'apples': 3, 'pears': 2, 'bananas': 0}
+            expedia_brands = ['Hotels.com', 'EPS', 'Expedia']
+
+            print(expedia_brands[0])  # 'Hotels.com'
+            print(expedia_brands[2])  # 'Expedia'
+
+            print(exam_grades[0])  # 40
+            print(exam_grades[-1])  # 73
+            print(exam_grades[-2])  # 99
             ```
-            
-            The program should:
-            1. Ask what the shopper would like to buy, and take user input.
-            2. Minus 1 of that item from that inventory and print the new inventory.
-            3. Assume that the user will type 'apples', 'pears' or 'bananas'!
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### Dictionary methods
+            ### Why use lists?
 
-            We can get lists of all keys or all values.
-            
+            A list acts as a single variable to store lots of data.
+
+            Here are some basic list tricks:
+
             ``` python
-            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
+            # Start with an empty list
+            sentence = ['Programming', 'is']
+            # Add an item to the end
+            sentence.append('fun')
 
-            print(inventory.keys())
-            # will print ['apples', 'pears', 'bananas']
-            print(inventory.values())
-            # will print [320, 228, 420]
+            print(sentence)
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Why use lists?
+
+            Sometimes it's useful to find if an element exists in a given list.
+
+            ``` python
+            expedia_brands = ['Hotels.com', 'EAN', 'Expedia']
+
+            if 'Booking.com' in expedia_brands:
+              print('Something must be wrong!')
+
+            if 'Hotels.com' in expedia_brands:
+              print('Yay!')
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Why use lists?
+
+            We can sort lists:
+            ``` python
+            random_numbers = [5, 3, 4, 6, 1, 2]
+            sorted_numbers = sorted(random_numbers)
+            print(sorted_numbers) # displays [1, 2, 3, 4, 5, 6]
             ```
 
-            Or we can check if a dictionary contains a given key, just like in lists.
+            Or just take slices of a list:
+            ``` python
+              letters = ['a', 'b', 'c', 'd', 'e', 'f']
+              letters[1:3] # results in ['b', 'c']
+              letters[2:3] # results in ['c']
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Strings can be treated like lists
+
+            What do we think this code will do?<br>
 
             ``` python
-            inventory = {'apples': 320, 'pears': 228, 'bananas': 420}
-
-            'apples' in inventory # will return True
-            'oranges' in inventory # will return False
+            my_string = 'Today is a great day!'
+            print(my_string[0])
             ```
           </textarea>
         </section>
@@ -202,41 +222,18 @@
 
             ``` python
             expedia_brands = ['Hotels.com', 'EPS', 'Expedia'] 
-            expedia_emplooyes_number = {
-              'Hotels.com': 70,
-              'EPS': 50,
-              'Expedia': 120
-            }
 
             for i, value in enumerate(expedia_brands):
                 print('Counter:', i, ',Value:', value)
-
-            for i, value in expedia_brands.items():
-                print('Key:', key, ',Value:', value)
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ### For loop exercise
-
-            Using a for loop and some_numbers, print each element multiplied by 10.
-            Example output: 15.0, 372.0, 550, -19.4
-
-            ``` python
-            some_numbers = [1.5, 37.2, 55, -1.94]
-            ```
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ### Homework
+            ### Exercise
 
             - Lines and word count of a text file
-            - Track the count of the letters from a string
-              - `{'e': 2, 'x': 1, 'p': 1, 'd': 1, 'i': 1, 'a': 1}`
 
               *Hint* for exercise:
               ```python
