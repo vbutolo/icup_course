@@ -1,5 +1,5 @@
 # Introduction to Computation Using Python
-## Expedia Code Academy - Rome 2018
+## Expedia Code Academy - Rome 2019
 
 ### Abstract
 This course introduces students with little or no prior programming experience to the art of computational problem solving using Python.
